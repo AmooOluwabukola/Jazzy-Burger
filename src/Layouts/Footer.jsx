@@ -25,14 +25,14 @@ const Footer = () => {
               <h4 className=' mx-2 fs-3'>24/7 <span className='support'>Support</span></h4>
               
             </div>
-            <div className='d-lg-flex text-white'>
+            <div className='d-lg-flex text-white '>
               <img src={Vector} alt="" />
               <h4 className=' mx-2 fs-2'>100%   <span className='payment'>Payment Secured</span></h4>
             </div>
             </div>
             
             {/* Add your two new images for links */}
-            <div className='d-lg-flex gap-4 w-50'>
+            <div className='d-lg-flex gap-3 w-50'>
               <img src={otherImage1} alt="Appstore" className='stores' />
               <img src={otherImage2} alt="Playstore" className='stores' />
             </div>

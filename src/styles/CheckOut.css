@@ -1,0 +1,12 @@
+.box{
+    background:rgba(225, 186, 186, 0.75);
+    height: 2rem;
+    width: 120px;
+
+    
+}
+/* @media (max-width:768px) {
+    .check-btn{
+        width:100%
+        }  
+} */

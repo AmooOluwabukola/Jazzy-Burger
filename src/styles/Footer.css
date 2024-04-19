@@ -3,7 +3,24 @@
 }
 
 .stores {
-  width: 45%;
+  width: 40%;
+}
+
+.payment {
+  display: flex;
+  font-size: 14.49px;
+  font-weight: 700;
+  line-height: 19.73px;
+  
+  
+}
+.support {
+  display: flex;
+  font-size: 14.49px;
+  font-weight: 700;
+  line-height: 19.73px;
+ 
+  
 }
 @media (max-width: 767px) {
   .stores {
@@ -11,6 +28,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 0.7rem;
+    width: 100%;
   }
 
   .social-icon {
