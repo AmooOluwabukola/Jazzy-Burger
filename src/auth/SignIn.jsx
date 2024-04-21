@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import JazzyLogo from "../assets/logo.svg";
 import { useForm } from "react-hook-form"
+import { ImEye } from "react-icons/im";
+import { ImEyeBlocked } from "react-icons/im";
 const SignIn = () => {
   const {
     register,
@@ -28,15 +30,15 @@ const SignIn = () => {
       <main className="container vh-50 d-flex flex-column my-3">
         <div>
           <div className="text-center ">
-            <Link>
-              <img src={JazzyLogo} alt="" className="mx-auto d-block " />
+          <Link to='/'>
+            <img src={JazzyLogo} alt="" className="mx-auto d-block " />
             </Link>
             <h6 className="text-center fs-3 m-auto my-4 w-75  fw-bold">
               SIGN IN TO YOUR ACCOUNT
             </h6>
           </div>
 
-          <Form className="w-75 m-auto" onSubmit={handleSubmit(onSubmit)}>
+          <Form className="w-50 m-auto" onSubmit={handleSubmit(onSubmit)}>
             {/* input for email */}
             <Form.Label className="fs-6 text-secondary">Email</Form.Label>
             <FloatingLabel
@@ -63,7 +65,7 @@ const SignIn = () => {
                 
                 />
                 {errors.password && <span className="text-danger">This field is required</span>}
-              <p className="position-absolute end-0 top-0 mt-3 me-2" role="button" onClick={handleToggle}>{ isReveal ? 'hide' : 'show' }</p>
+              <p className="position-absolute end-0 top-0 mt-3 me-3" role="button" onClick={handleToggle}>{ isReveal ?  <ImEyeBlocked  />: <ImEye /> }</p>
             </FloatingLabel>
             {/* checkbox */}
             <div className="mt-3 d-flex justify-content-between">

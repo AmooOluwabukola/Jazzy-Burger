@@ -1,19 +1,24 @@
 import React, { useEffect } from "react";
+// import  { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import '../styles/CheckOut.css'
+import RecipientMode from "./RecipientMode";
+import Address from "./Address";
+
 
 const CheckOut = () => {
   useEffect(() => {
     document.title = "Check Out | Page";
   });
+  // const [recipientShow, setRecipientShow]= useState(false)
   return (
     <>
-      <main className="container mt-5">
-        <div className="row d-md-flex gap-3 my-5  ">
+      <main className="container mt-5 position-relative">
+        <div className="container row d-md-flex gap-3 my-5  ">
           <section className="col-md-7 border rounded-4 p-3 ">
-            <div className="text-dark fs-">
+            <div className="text-dark ">
               <h3>Review and place order</h3>
               <p className=''>
                 Review / Add address and fulfill payments to complete your
@@ -23,22 +28,23 @@ const CheckOut = () => {
             <hr />
             <div className="d-md-flex flex-column gap-3">
               <h5>Recipient information</h5>
-              <button className="btn btn-dark w-50 rounded-2 check-btn">Add Recipient</button>
+              <RecipientMode/>
+              
+              
             </div>
             <hr />
-            <div className="d-md-flex flex-column gap-3">
+            <div className="d-md-flex flex-column gap-3" >
               <h5>Delivery Address</h5>
-              <button className="btn btn-dark w-50 rounded-2">
-                Add Delivery Address
-              </button>
+              <Address/>
+              
             </div>
             <hr />
-            <button className="btn btn-success mb-3 w-100 check-btn">
+            <button className="btn btn-success mb-3 w-100 ">
               Place Your Order
             </button>
           </section>
-
-          {/* section two */}
+          
+{/* section two */}
           <section className="col-md-4 border rounded-4 p-3 ">
             <h5 className="fw-bold">Your order from</h5>
             <hr />
@@ -50,9 +56,9 @@ const CheckOut = () => {
               <p>N 12000.0</p>
             </div>
             <div className="d-flex justify-content-between  border rounded box">
-              <button className="border rounded text-danger btnbox align-items-center w-25 "><FaMinus /></button>
+              <button className="border rounded text-danger  align-items-center w-25 "><FaMinus /></button>
               <h4 className="text-center">3</h4>
-              <button className="border rounded text-danger btnbox w-25 "><FaPlus /></button>
+              <button className="border rounded text-danger  w-25 "><FaPlus /></button>
             </div>
             <hr />
             <div className="d-flex justify-content-between">

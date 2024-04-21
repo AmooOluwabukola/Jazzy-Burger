@@ -19,6 +19,7 @@ function App() {
         <Route element= { <> <Navbar cartItem ={cartItem}/> <Footer/>  </> }>
          <Route path='/' element= {<Home/>}/>
         <Route path='CheckOut' element= {<CheckOut/>}/>
+        
         </Route>
         <Route path='SignUp' element= {<SignUp/>}/>
         <Route path='SignIn' element= {<SignIn/>}/>
