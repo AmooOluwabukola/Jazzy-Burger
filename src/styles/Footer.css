@@ -30,19 +30,20 @@
     justify-content: center;
     margin-top: 3px;
     margin-bottom: 0.7rem;
-    width: 100%;
+    width: 50%;
   }
 
   .social-icon {
     width: 25px;
+   
   }
-  .footer-section {
+  /* .footer-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  /* .txt {
+  .txt {
     text-align: center;
     
   } */

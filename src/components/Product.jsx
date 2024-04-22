@@ -35,7 +35,7 @@ const Product = () => {
   }, []);
   return (
     <>
-      {isLoading && <> <Spinner animation="border" class="text-center" />; </>}
+      {isLoading && <> <Spinner animation="border" class="text-center" /> </>}
       <main className=" my-5 row">
         <div className="d-none d-lg-block col-lg-3">
           <img className="w-100 h-100 " src={JazzyImg} alt="jazzy-img" />

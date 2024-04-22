@@ -25,7 +25,7 @@ const Footer = () => {
               <h4 className=' mx-2 fs-3'>24/7 <span className='support'>Support</span></h4>
               
             </div>
-            <div className='d-lg-flex text-white '>
+            <div className='d-lg-flex text-white  mt-4'>
               <img src={Vector} alt="" />
               <h4 className=' mx-2 fs-2'>100%   <span className='payment'>Payment Secured</span></h4>
             </div>
