@@ -10,8 +10,8 @@ import Egg from '../assets/egg.png';
 import Onion from '../assets/onion.png';
 import Add from '../assets/add1.png';
 import Heart from '../assets/heart.svg';
-import "../styles/Product.css"
 import Spinner from 'react-bootstrap/Spinner';
+import "../styles/Product.css"
 const Product = () => {
   const [isLoading,setIsLoading] = useState(false)
 
