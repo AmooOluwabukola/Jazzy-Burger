@@ -18,7 +18,7 @@ const Footer = () => {
           <div className='d-lg-flex justify-content-between  gap-4'>
            
             {/* parent div */}
-            <div className='d-flex justify-content-between  flex-column-reverse flex-lg-row'>
+            <div className='d-flex justify-content-between   flex-column-reverse flex-lg-row'>
                  {/* Images for 24/7 support */}
             <div className='d-lg-flex text-white'>
               <img src={Group27} alt="" />

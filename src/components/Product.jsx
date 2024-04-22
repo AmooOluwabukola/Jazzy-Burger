@@ -46,13 +46,8 @@ const Product = () => {
             const {
               _id,
               title,
-              description,
               image,
-              category,
               price,
-              _v,
-              createdAt,
-              updatedAt,
             } = datum
             
             return (
