@@ -40,9 +40,9 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className='container mt-3 txt'>
-            <p className='text-light'>Need Help</p>
-            <h2 className='text-light fs-6'>+234 907 466 6655</h2>
-            <h2 className='text-light fs-6'>help@jazzysburger.com</h2>
+            <p className='text-light fs-5 fw-bold'>Need Help</p>
+            <span className='text-light fs-6 text-decoration-underline' >+234 907 466 6655</span> <span className='text-light fs-6'>or</span>
+            <h2 className='text-light fs-6 text-decoration-underline'>help@jazzysburger.com</h2>
           </div>
 
           {/* Social Media Icons */}

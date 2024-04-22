@@ -2,13 +2,66 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Modal from "react-bootstrap/Modal";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 function Address() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [selectedState, setSelectedState] = useState("");
+  const [cities, setCities] = useState([]);
+  const states = ["Lagos", "Abuja"]; // Static list of states
+  const citiesByState = {
+    Lagos: [
+      "Ikeja",
+      "Lekki",
+      "Victoria Island",
+      "Lagos Island",
+      "Epe",
+      "Ikorodu",
+      "Akesan",
+      "Badagry",
+      "Ojo",
+      "Surulere",
+      "Ajah",
+      "Yaba",
+      "Shomolu",
+      "Apapa",
+      "Amuwo Odofin",
+      "Oshodi",
+      "Alimosho",
+      "Mushin",
+      "Agege",
+    ],
+    Abuja: [
+      "Wuse",
+      "Garki",
+      "Asokoro",
+      "Lokogoma",
+      "Galadimawa",
+      "Kado",
+      "Mpape",
+      "Jahi",
+      "Durumi",
+      "Lugbe",
+      "Nyanya",
+      "Karu",
+      "Utako",
+      "Jabi",
+      "Kubwa",
+      "Gwarinpa",
+      "Wuse 2",
+      "Maitama",
+      "Central Business District (CBD)",
+    ],
+  }; // Define cities for each state
+
+  const handleStateChange = (event) => {
+    const state = event.target.value;
+    setSelectedState(state);
+    setCities(citiesByState[state]);
+  };
   return (
     <>
       <button
@@ -17,7 +70,7 @@ function Address() {
       >
         Add Delivery Address
       </button>
-     
+
       <Modal
         show={show}
         onHide={handleClose}
@@ -25,28 +78,39 @@ function Address() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title className="text-center">Add Address</Modal.Title>
+          <Modal.Title className="text-center fs-3 m-auto my-4 w-100  fw-bold text-black">
+            Add Address
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/* State */}
           <Form.Label className="fs-6 text-secondary">Select State</Form.Label>
           <FloatingLabel controlId="floatingSelect">
-            <Form.Select aria-label="Floating label select example">
-              <option>Select State</option>
-              <option value="1">Lagos</option>
-              <option value="2">Abuja</option>
+            <Form.Select
+              aria-label="Floating label select example"
+              value={selectedState}
+              onChange={handleStateChange}
+            >
+              <option value=" ">Select State</option>
+              {states.map((state) => (
+                <option value={state}>{state}</option>
+              ))}
             </Form.Select>
           </FloatingLabel>
+
           {/* City */}
           <Form.Label className="fs-6 text-secondary">Select City</Form.Label>
           <FloatingLabel controlId="floatingSelect" className="mb-2">
             <Form.Select aria-label="Floating label select example">
-              <option>Select City</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value=" ">Select City</option>
+              {cities.map((city, index) => (
+                <option key={index} value={city}>
+                  {city}
+                </option>
+              ))}
             </Form.Select>
           </FloatingLabel>
+
           {/* House Number */}
           <Form.Label className="fs-6 text-secondary">House Number</Form.Label>
           <FloatingLabel
@@ -67,7 +131,7 @@ function Address() {
           </FloatingLabel>
 
           <Button className="btn btn-danger text-white text-center w-100 mb-4 mt-3">
-           Use This Address
+            Use This Address
           </Button>
         </Modal.Body>
         <Modal.Footer>

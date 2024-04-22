@@ -11,11 +11,14 @@ import Onion from '../assets/onion.png';
 import Add from '../assets/add1.png';
 import Heart from '../assets/heart.svg';
 import "../styles/Product.css"
-
+import Spinner from 'react-bootstrap/Spinner';
 const Product = () => {
+  const [isLoading,setIsLoading] = useState(false)
+
   const [data, setData] = useState([]);
   const fetchReq = async () => {
     try {
+      setIsLoading(true)
       const request = await fetch(
         "https://jazzy-mern.onrender.com/api/products"
       );
@@ -32,6 +35,7 @@ const Product = () => {
   }, []);
   return (
     <>
+      {isLoading && <> <Spinner animation="border" class="text-center" />; </>}
       <main className=" my-5 row">
         <div className="d-none d-lg-block col-lg-3">
           <img className="w-100 h-100 " src={JazzyImg} alt="jazzy-img" />
